@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - develop
       - pre-release
     paths-ignore:
       - 'syntaxes/**'
