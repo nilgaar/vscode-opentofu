@@ -60,7 +60,7 @@ jobs:
           echo ">>> Started xvfb"
         if: matrix.os == 'ubuntu-latest'
       - name: Install OpenTofu
-        uses: opentofu/setup-opentofu@v1
+        uses: opentofu/setup-opentofu@v1.0.4
         with:
           tofu_wrapper: false
           tofu_version: 1.7.0
