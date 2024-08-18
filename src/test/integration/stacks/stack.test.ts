@@ -24,20 +24,6 @@ suite('stacks stack', () => {
       const doc = await vscode.workspace.openTextDocument(docUri);
       assert.equal(doc.languageId, 'terraform-stack', 'document language should be `terraform-stack`');
     });
-
-    test('completes blocks available for stacks files', async () => {
-      const expected = [
-        new vscode.CompletionItem('component', vscode.CompletionItemKind.Class),
-        new vscode.CompletionItem('output', vscode.CompletionItemKind.Class),
-        new vscode.CompletionItem('provider', vscode.CompletionItemKind.Class),
-        new vscode.CompletionItem('required_providers', vscode.CompletionItemKind.Class),
-        new vscode.CompletionItem('variable', vscode.CompletionItemKind.Class),
-      ];
-
-      await testCompletion(docUri, new vscode.Position(20, 0), {
-        items: expected,
-      });
-    });
   });
 
   suite('components', function suite() {

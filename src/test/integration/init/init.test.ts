@@ -24,7 +24,6 @@ suite('init', () => {
       const doc = await vscode.workspace.openTextDocument(docUri);
       assert.equal(doc.languageId, 'terraform', 'document language should be `terraform`');
     });
-
   });
 
   suite('with provider schema from init', function suite() {
