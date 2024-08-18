@@ -6,10 +6,6 @@ on:
       - main
       - develop
       - pre-release
-    paths-ignore:
-      - 'syntaxes/**'
-      - 'tests/**'
-      - '**.md'
   pull_request:
     branches:
       - main
