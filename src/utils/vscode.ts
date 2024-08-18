@@ -57,7 +57,7 @@ export function isTerraformFile(document?: vscode.TextDocument): boolean {
   }
 
   // TODO: check for supported language IDs here instead
-  if (document.fileName.endsWith('tf')) {
+  if (document.fileName.endsWith('tf') || document.fileName.endsWith('tofu')) {
     // For the purposes of this extension, anything with the tf file
     // extension is a Terraform file
     return true;
